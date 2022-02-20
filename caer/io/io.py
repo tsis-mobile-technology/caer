@@ -98,8 +98,9 @@ def _imread(
         tens = _read_image(image_path)  # returns RGB
 
     # TODO: Create URL validator
-    elif image_path.startswith(('http://", "https://')):
+    elif image_path.startswith(('http://', 'https://')):
         # Returns RGB image
+        print("image_path:" + image_path)
         tens = _url_to_image(image_path)
 
         # If the URL is valid, but no image at that URL, NoneType is returned
